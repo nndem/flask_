@@ -15,7 +15,10 @@ def about():
 
 @app.route('/blog')
 def blog():
-    return render_template('blog.html', author='Nick')
+    posts = [{'title': 'Technology in 2020', 'author': 'don Nick'},
+             {'title': 'Expansion of MTH in Taganrog', 'author': 'don Nick'}
+             ]
+    return render_template('blog.html', author='Nick', sunny=False, posts=posts)
 
 
 @app.route('/blog/<string:blog_id>')
