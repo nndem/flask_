@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
+
+{% block content %}
 <h2> Welcome to this blog MTH </h2>
-<p> I am {{author}}</br> </p>
+<p> I am {{author}} </p>
 <p>Always f** this mommy</p>
 {% if sunny %}
 <p>Today it is sunny</p>
@@ -17,7 +13,8 @@
 
 {% for post in posts %}
 <h2>{{post.title}}</h2>
-<h3>Author:{{post.author}}</h3>
+<!-- <h3>Author:{{post.author}}</h3>-->
 {% endfor %}
-</body>
-</html>
+{% endblock %}
+
+
